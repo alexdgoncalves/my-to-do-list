@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>My To do list</title>
+  </head>
+  <body class="body">
+    <main class="container">
+      <div class="logo">
+        <img src="./img/check-box.png" width="55px" height="55px" />
+      </div>
+
+      <div class="div-title">
+        <h1 class="title">Escrevas suas tarefas de terça-feira</h1>
+      </div>
+
+      <div class="adicionar-tarefa">
+        <input
+          type="text"
+          id="tarefa-digitada"
+          placeholder="Digite aqui a sua tarefa"
+          class="input-tarefa"
+        />
+        <img class="increment" src="./img/plus.png" />
+      </div>
+      <ul class="lista-to-do">
+        <li class="li-no">
+          <div class="box-img">
+            <img
+              class="no-checkbox"
+              src="./img/empty-checkbox.png"
+              alt="empty-checkbox"
+            />
+            <text class="text-no">teste</text>
+          </div>
+          <img class="close" src="./img/x.png" />
+        </li>
+        <li class="li-yes">
+          <div class="box-img">
+            <img
+              class="yes-checkbox"
+              src="./img/check.png"
+              alt="empty-checkbox"
+            />
+            <text class="text-yes">teste</text>
+          </div>
+          <img class="close" src="./img/x.png" />
+        </li>
+      </ul>
+      <div class="background">
+        <img class="img-background" src="./img/undraw_Checklist__re_2w7v.svg" />
+      </div>
+    </main>
+    <footer>
+      <div>create by <a href="#"> alex gonçalves</a></div>
+    </footer>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

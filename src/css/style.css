@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-10: #161925;
+  --color-20: #8ea8c3;
+  --color-30: #23395b;
+  --color-40: #cbf7ed;
+
+  --color-60: #ffff;
+}
+body {
+  align-items: center;
+  background: var(--color-10);
+  font-family: "Ubuntu", sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.logo {
+  margin: 50px;
+}
+
+.title {
+  margin-bottom: 2vh;
+  color: var(--color-60);
+  font-size: 30px;
+  text-transform: none;
+}
+
+.div-title {
+  display: flex;
+  justify-content: center;
+  width: 40vw;
+  margin-bottom: 5vh;
+  border-bottom: solid 1px var(--color-60);
+}
+
+.adicionar-tarefa {
+  margin: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  width: 300px;
+  border-radius: 10px;
+  background: var(--color-60);
+}
+
+.input-tarefa {
+  display: flex;
+  height: 20px;
+  border: hidden;
+  outline: none;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.increment {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  color: gray;
+}
+
+footer {
+  margin-top: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-60);
+}
+
+a {
+  color: var(--color-20);
+  text-decoration: none;
+}
+
+.lista-to-do {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.li-no {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px;
+  padding: 8px;
+  width: 300px;
+  border-radius: 10px;
+  background: var(--color-60);
+  cursor: pointer;
+}
+
+.li-yes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 5px;
+  padding: 8px;
+  width: 300px;
+  border-radius: 10px;
+  background: var(--color-20);
+  cursor: pointer;
+  text-decoration: line-through;
+}
+
+.no-checkbox,
+.yes-checkbox {
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+}
+
+.close {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  color: gray;
+}
+
+.background {
+  position: absolute;
+  z-index: -1;
+  top: 64.8vh;
+  left: 70vw;
+}
+
+.img-background {
+  width: 25vw;
+}
