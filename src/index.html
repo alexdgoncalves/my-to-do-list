@@ -15,14 +15,15 @@
   </head>
   <body class="body">
     <main class="container">
-      <div class="logo">
-        <img src="./img/check-box.png" width="55px" height="55px" />
-      </div>
+      <header>
+        <div class="logo">
+          <img src="./img/check-box.png" width="55px" height="55px" />
+        </div>
 
-      <div class="div-title">
-        <h1 class="title">Escrevas suas tarefas de terça-feira</h1>
-      </div>
-
+        <div class="div-title">
+          <h1 class="title">Escrevas suas tarefas de hoje</h1>
+        </div>
+      </header>
       <div class="adicionar-tarefa">
         <input
           type="text"
@@ -30,32 +31,11 @@
           placeholder="Digite aqui a sua tarefa"
           class="input-tarefa"
         />
-        <img class="increment" src="./img/plus.png" />
+        <img class="increment" id="increment" src="./img/plus.png" />
       </div>
-      <ul class="lista-to-do">
-        <li class="li-no">
-          <div class="box-img">
-            <img
-              class="no-checkbox"
-              src="./img/empty-checkbox.png"
-              alt="empty-checkbox"
-            />
-            <text class="text-no">teste</text>
-          </div>
-          <img class="close" src="./img/x.png" />
-        </li>
-        <li class="li-yes">
-          <div class="box-img">
-            <img
-              class="yes-checkbox"
-              src="./img/check.png"
-              alt="empty-checkbox"
-            />
-            <text class="text-yes">teste</text>
-          </div>
-          <img class="close" src="./img/x.png" />
-        </li>
-      </ul>
+      <div id="tarefas">
+        <ul class="lista-to-do" id="bord"></ul>
+      </div>
       <div class="background">
         <img class="img-background" src="./img/undraw_Checklist__re_2w7v.svg" />
       </div>
