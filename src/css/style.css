@@ -109,6 +109,7 @@ a {
   border-radius: 10px;
   background: var(--color-60);
   cursor: pointer;
+  transition: all 1.5s;
 }
 
 .li-yes {
@@ -123,6 +124,7 @@ a {
   background: var(--color-20);
   cursor: pointer;
   text-decoration: line-through;
+  transition: all 1.5s;
 }
 
 .no-checkbox,

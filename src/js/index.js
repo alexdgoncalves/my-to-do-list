@@ -8,7 +8,7 @@ adcTarefas.addEventListener("click", () => {
   const idCheck = Math.random().toString(36).substr(2);
 
   const novaTarefa = inputTarefas.value;
-  let card = `
+  let newCard = `
   <li class="li-no">
     <div class="box-img" id="${idCheck}">
       <text class="text-no">${novaTarefa}</text>
@@ -21,23 +21,25 @@ adcTarefas.addEventListener("click", () => {
   }
   novaTarefa.input = null;
 
-  bord.insertAdjacentHTML("beforeend", card);
+  bord.insertAdjacentHTML("beforeend", newCard);
 
   const closeCard = document.getElementById(`${idDelete}`);
-  const btnFinalizar = tarefas.lastElementChild.lastChild;
-  const checkbox = document.getElementById(`${idCheck}`);
+  const idCard = document.getElementById(`${idCheck}`);
+  const card = tarefas.lastElementChild.lastChild;
 
   closeCard.addEventListener("click", () => {
     if (idDelete === closeCard.id) {
-      btnFinalizar.remove();
+      card.remove();
     }
   });
 
-  btnFinalizar.addEventListener("click", () => {
-    if (btnFinalizar.className == "li-no" && checkbox.id == idCheck) {
-      btnFinalizar.className = "li-yes";
+  card.addEventListener("click", () => {
+    if (card.className == "li-no" && idCard.id == idCheck) {
+      card.style.transform = "rotatex(360deg)";
+      card.className = "li-yes";
     } else {
-      btnFinalizar.className = "li-no";
+      card.style.transform = "rotatex(0deg)";
+      card.className = "li-no";
     }
   });
 });
