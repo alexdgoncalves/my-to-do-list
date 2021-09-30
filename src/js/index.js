@@ -2,6 +2,23 @@ const adcTarefas = document.querySelector("#increment");
 const inputTarefas = document.querySelector("#tarefa-digitada");
 const bord = document.querySelector("#bord");
 const tarefas = document.querySelector("#tarefas");
+const title = document.querySelector(".title");
+
+function weekday() {
+  var today = new Date();
+  var day = today.getDay();
+  var week = new Array(6);
+  week[0] = "Domingo";
+  week[1] = "Segunda-Feira";
+  week[2] = "Terça-Feira";
+  week[3] = "Quarta-Feira";
+  week[4] = "Quinta-Feira";
+  week[5] = "Sexta-Feira";
+  week[6] = "Sábado";
+  return week[day];
+}
+
+title.innerHTML = `Escreva suas tarefas de ${weekday()}`;
 
 adcTarefas.addEventListener("click", () => {
   const idDelete = Math.random().toString(36).substr(2);
