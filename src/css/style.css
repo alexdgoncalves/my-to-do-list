@@ -33,6 +33,7 @@ header {
 }
 
 .title {
+  font-size: 2.5rem;
   padding: 1rem 0;
 
   color: var(--color-60);
@@ -51,7 +52,8 @@ header {
   display: flex;
   align-items: center;
   padding: 0.4rem;
-  max-width: 600px;
+  width: 100%;
+  max-width: 400px;
   border-radius: 10px;
   background: var(--color-60);
 }
@@ -72,7 +74,7 @@ header {
   display: block;
 
   padding-right: 0.5rem;
-  width: 1.3rem;
+  width: 1.5rem;
   cursor: pointer;
 }
 
@@ -106,8 +108,8 @@ a {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 14px;
-  padding: 0.5rem 1rem;
-  width: 320px;
+  padding: 0.5rem 0.8rem;
+  width: 380px;
   border-radius: 10px;
   cursor: pointer;
   transition: all 1.5s;
@@ -120,8 +122,8 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 14px;
-  padding: 0.5rem 1rem;
-  width: 320px;
+  padding: 0.5rem 0.8rem;
+  width: 380px;
   border-radius: 10px;
   cursor: pointer;
   text-decoration: line-through;
@@ -137,8 +139,8 @@ a {
 }
 
 .close {
-  width: 10px;
-  height: 10px;
+  width: 0.8rem;
+  height: 0.8rem;
   cursor: pointer;
   opacity: 0.3;
   filter: alpha(opacity=50);
@@ -158,4 +160,81 @@ a {
 .img-background {
   width: 25vw;
   border: none;
+}
+
+@media screen and (max-width: 375px) {
+  .logo {
+    max-width: 52px;
+    padding: 1rem 0;
+  }
+  .title {
+    font-size: 1.4rem;
+    padding: 0.5rem 0;
+  }
+  .adicionar-tarefa {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.2rem;
+  }
+  .increment {
+    width: 1.5rem;
+  }
+  .close {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  .li-no,
+  .li-yes {
+    width: 100%;
+    max-width: 285px;
+    padding: 0.5rem 0.8rem;
+  }
+  .background {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .background {
+    position: absolute;
+    top: 73vh;
+    right: 70vw;
+  }
+
+  .img-background {
+    width: 30vw;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .background {
+    position: absolute;
+    top: 75vh;
+    right: 65vw;
+  }
+
+  .img-background {
+    width: 35vw;
+    border: none;
+  }
+  .adicionar-tarefa {
+    padding: 0.2rem;
+  }
+  .increment {
+    width: 1.5rem;
+  }
+  .close {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  .li-no,
+  .li-yes {
+    width: 375px;
+    padding: 0.5rem 0.8rem;
+  }
 }
