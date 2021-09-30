@@ -20,7 +20,7 @@ function weekday() {
 
 title.innerHTML = `Escreva suas tarefas de ${weekday()}`;
 
-adcTarefas.addEventListener("click", () => {
+function makeAssignment() {
   const idDelete = Math.random().toString(36).substr(2);
   const idCheck = Math.random().toString(36).substr(2);
 
@@ -39,7 +39,6 @@ adcTarefas.addEventListener("click", () => {
   novaTarefa.input = null;
 
   bord.insertAdjacentHTML("beforeend", newCard);
-
   const closeCard = document.getElementById(`${idDelete}`);
   const idCard = document.getElementById(`${idCheck}`);
   const card = tarefas.lastElementChild.lastChild;
@@ -59,4 +58,11 @@ adcTarefas.addEventListener("click", () => {
       card.className = "li-no";
     }
   });
+}
+
+inputTarefas.addEventListener("keypress", (event) => {
+  if (event.keyCode === 13) {
+    makeAssignment();
+  }
 });
+adcTarefas.addEventListener("click", makeAssignment);
