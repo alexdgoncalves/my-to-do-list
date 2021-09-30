@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
 }
 
 :root {
@@ -15,69 +16,68 @@
 body {
   align-items: center;
   background: var(--color-10);
-  font-family: "Ubuntu", sans-serif;
 }
 
 header {
   display: flex;
-  align-items: center;
   flex-direction: column;
-}
-.container {
-  display: flex;
-  flex-direction: column;
+
   align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
+
+  padding: 1.5rem;
 }
 
 .logo {
-  margin: 50px;
+  max-width: 80px;
+  padding: 1rem 0;
 }
 
 .title {
-  margin-bottom: 2vh;
+  padding: 1rem 0;
+
   color: var(--color-60);
-  font-size: 30px;
-  text-transform: none;
+
+  text-align: center;
 }
 
-.div-title {
+.container {
   display: flex;
-  justify-content: center;
-  width: 40vw;
-  margin-bottom: 5vh;
-  border-bottom: solid 1px var(--color-60);
+  flex-direction: column;
+
+  align-items: center;
 }
 
 .adicionar-tarefa {
-  margin: 15px;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  padding: 5px;
-  width: 300px;
+  padding: 0.4rem;
+  max-width: 600px;
   border-radius: 10px;
   background: var(--color-60);
 }
 
 .input-tarefa {
-  display: flex;
-  height: 20px;
+  width: 100%;
+  padding: 0.3rem;
+  margin: 0 1rem;
+
   border: hidden;
+
   outline: none;
-  font-family: "Ubuntu", sans-serif;
+
+  font-size: 1rem;
 }
 
 .increment {
-  max-width: 13px;
-  max-height: 13px;
+  display: block;
+
+  padding-right: 0.5rem;
+  width: 1.3rem;
   cursor: pointer;
 }
 
 footer {
-  margin-top: 35vh;
+  margin-top: 50vh;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -94,22 +94,24 @@ a {
 
 .lista-to-do {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  justify-items: center;
+
+  align-items: center;
+
+  padding: 1.5rem;
 }
 
 .li-no {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 5px;
-  padding: 8px;
-  width: 300px;
+  margin-bottom: 14px;
+  padding: 0.5rem 1rem;
+  width: 320px;
   border-radius: 10px;
-  background: var(--color-60);
   cursor: pointer;
   transition: all 1.5s;
+  background: var(--color-60);
 }
 
 .li-yes {
@@ -117,14 +119,14 @@ a {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 5px;
-  padding: 8px;
-  width: 300px;
+  margin-bottom: 14px;
+  padding: 0.5rem 1rem;
+  width: 320px;
   border-radius: 10px;
-  background: var(--color-20);
   cursor: pointer;
   text-decoration: line-through;
   transition: all 1.5s;
+  background: var(--color-20);
 }
 
 .no-checkbox,
@@ -149,11 +151,11 @@ a {
 
 .background {
   position: absolute;
-  z-index: -1;
-  top: 62.8vh;
-  right: 70vw;
+  top: 64.5vh;
+  right: 75vw;
 }
 
 .img-background {
   width: 25vw;
+  border: none;
 }
