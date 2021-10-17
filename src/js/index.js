@@ -4,6 +4,8 @@ const bord = document.querySelector("#bord");
 const tarefas = document.querySelector("#tarefas");
 const title = document.querySelector(".title");
 
+const allAssignment = [];
+
 function weekday() {
   var today = new Date();
   var day = today.getDay();
@@ -23,9 +25,20 @@ title.innerHTML = `Escreva suas tarefas de ${weekday()}`;
 function makeAssignment() {
   const idDelete = Math.random().toString(36).substr(2);
   const idCheck = Math.random().toString(36).substr(2);
-  const allAssignment = [];
+  console.log(allAssignment);
 
   const novaTarefa = inputTarefas.value;
+
+  if (allAssignment.find((index) => index == novaTarefa) == novaTarefa) {
+    const answer = confirm(
+      "Esta tarefa ja existente, deseja mesmo assim adicioná la ?"
+    );
+
+    if (!answer) {
+      return;
+    }
+  }
+  allAssignment.push(inputTarefas.value);
 
   let newCard = `
   <li class="li-no">
@@ -38,13 +51,10 @@ function makeAssignment() {
     alert("campo não preenchido");
     adcTarefas.removeEventListener();
   }
-  novaTarefa.input = null;
 
+  novaTarefa.input = null;
   bord.insertAdjacentHTML("beforeend", newCard);
-  if (allAssignment.find((index) => index === novaTarefa) == novaTarefa) {
-    alert("ja existe");
-  }
-  allAssignment.push(novaTarefa);
+  console.log(allAssignment);
 
   const closeCard = document.getElementById(`${idDelete}`);
   const idCard = document.getElementById(`${idCheck}`);
