@@ -23,8 +23,10 @@ title.innerHTML = `Escreva suas tarefas de ${weekday()}`;
 function makeAssignment() {
   const idDelete = Math.random().toString(36).substr(2);
   const idCheck = Math.random().toString(36).substr(2);
+  const allAssignment = [];
 
   const novaTarefa = inputTarefas.value;
+
   let newCard = `
   <li class="li-no">
     <div class="box-img" id="${idCheck}">
@@ -39,6 +41,11 @@ function makeAssignment() {
   novaTarefa.input = null;
 
   bord.insertAdjacentHTML("beforeend", newCard);
+  if (allAssignment.find((index) => index === novaTarefa) == novaTarefa) {
+    alert("ja existe");
+  }
+  allAssignment.push(novaTarefa);
+
   const closeCard = document.getElementById(`${idDelete}`);
   const idCard = document.getElementById(`${idCheck}`);
   const card = tarefas.lastElementChild.lastChild;
